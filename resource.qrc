@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="copy">resource/icon/Copy.png</file>
+        <file>resource/icon/exit .ico</file>
+        <file alias="last">resource/icon/left.png</file>
+        <file alias="openfile">resource/icon/Newtest.png</file>
+        <file alias="opendir">resource/icon/Open.png</file>
+        <file alias="next">resource/icon/Right.png</file>
+        <file alias="save">resource/icon/Save.png</file>
+        <file alias="autosave">resource/icon/Saveall.png</file>
+        <file alias="tools">resource/icon/Set.png</file>
+        <file alias="del">resource/icon/Stop.png</file>
+        <file alias="undo">resource/icon/back.png</file>
+        <file alias="output">resource/icon/Output.png</file>
+        <file alias="ellipse">resource/icon/ellispe.png</file>
+    </qresource>
+</RCC>

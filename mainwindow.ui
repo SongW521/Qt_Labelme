@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>769</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ActionsContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>LabelAnnotation</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icon/tools</normaloff>:/icon/tools</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>40</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="CanVasWidget" name="graphicsView">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>769</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMU">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="openFileAC"/>
+    <addaction name="separator"/>
+    <addaction name="openDirAC"/>
+    <addaction name="saveasAC"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="saveAC"/>
+    <addaction name="separator"/>
+    <addaction name="closeAC"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="delFileAC"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="editMU">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="outputDirAC"/>
+    <addaction name="separator"/>
+    <addaction name="lastAC"/>
+    <addaction name="nextAC"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="undoAC"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="toolMU">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="editLabelAC"/>
+    <addaction name="createAC"/>
+    <addaction name="copyAC"/>
+    <addaction name="separator"/>
+    <addaction name="delAimAC"/>
+    <addaction name="separator"/>
+    <addaction name="ellipseShapeAC"/>
+    <addaction name="separator"/>
+    <addaction name="setlineAC"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="helpMU">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <addaction name="fileMU"/>
+   <addaction name="editMU"/>
+   <addaction name="toolMU"/>
+   <addaction name="helpMU"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+  </action>
+  <action name="openFileAC">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/resource/icon/Newtest.png</normaloff>:/icon/resource/icon/Newtest.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件 </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="openDirAC">
+   <property name="text">
+    <string>打开目录   </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="saveAC">
+   <property name="text">
+    <string>保存 </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="saveasAC">
+   <property name="text">
+    <string>另存为 </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="closeAC">
+   <property name="text">
+    <string>关闭所有   </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="outputDirAC">
+   <property name="text">
+    <string>输出目录</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="lastAC">
+   <property name="text">
+    <string>上一个</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="text">
+    <string>上一个</string>
+   </property>
+  </action>
+  <action name="nextAC">
+   <property name="text">
+    <string>下一个</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="action_26">
+   <property name="text">
+    <string>保存数据</string>
+   </property>
+  </action>
+  <action name="undoAC">
+   <property name="text">
+    <string>撤销</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_30">
+   <property name="text">
+    <string>删除数据</string>
+   </property>
+  </action>
+  <action name="action_31">
+   <property name="text">
+    <string>创建区块</string>
+   </property>
+  </action>
+  <action name="createAC">
+   <property name="text">
+    <string>创建区块</string>
+   </property>
+   <property name="shortcut">
+    <string>W</string>
+   </property>
+  </action>
+  <action name="copyAC">
+   <property name="text">
+    <string>复制区块</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="delAimAC">
+   <property name="text">
+    <string>删除区块</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="ellipseShapeAC">
+   <property name="text">
+    <string>椭圆区块</string>
+   </property>
+   <property name="shortcut">
+    <string>E</string>
+   </property>
+  </action>
+  <action name="setlineAC">
+   <property name="text">
+    <string>线条颜色</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="delFileAC">
+   <property name="text">
+    <string>删除文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="editLabelAC">
+   <property name="text">
+    <string>编辑标签</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>自动保存</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CanVasWidget</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">canvaswidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
